@@ -61,5 +61,8 @@ class Dog
     row = DB[:conn].execute(sql,name:,breed:).first
     if !row.empty?
       self.find_by_id(row[0])
+    else
+      self.new_from_db(row)
+    end
   end
 end
