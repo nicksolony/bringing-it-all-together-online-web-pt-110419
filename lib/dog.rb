@@ -9,6 +9,7 @@ class Dog
   end
   
   def self.create_table
-    sql = CREATE TABLE IF NOT EXISTS IN 
+    sql = "CREATE TABLE dogs IF NOT EXISTS IN dogs;"
+    DB[:conn].execute (sql)
   
 end
