@@ -41,4 +41,6 @@ class Dog
     dog = self.new(name:name,breed:breed)
     dog.save
   end
+  
+  def self.new_from_db(row)
 end
