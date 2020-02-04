@@ -60,6 +60,6 @@ class Dog
     sql = "SELECT * FROM dogs WHERE name = ? AND breed =?;"
     row = DB[:conn].execute(sql,name:,breed:).first
     if !row.empty?
-      
+      self.find_by_id(row[0])
   end
 end
