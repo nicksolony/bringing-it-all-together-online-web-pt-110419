@@ -63,7 +63,7 @@ class Dog
     if !row.empty?
       self.find_by_id(row[0])
     else
-      self.new_from_db(row)
+      self.create(name:,breed:)
     end
   end
 end
