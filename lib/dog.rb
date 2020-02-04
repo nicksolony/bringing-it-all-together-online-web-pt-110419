@@ -57,6 +57,7 @@ class Dog
   end
   
   def self.find_or_create_by_id(id)
-    
+    sql = "SELECT * FROM dogs WHERE id = ?;"
+    row = DB[:conn].execute(sql,id).first
   end
 end
