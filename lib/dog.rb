@@ -42,9 +42,9 @@ class Dog
     dog.save
   end
   
-  def self.new_from_db(id)
-    sql = "SELECT * FROM dogs WHERE id = ?;"
-    row = DB[:conn].execute(sql,id).first
+  def self.new_from_db(row)
+    #sql = "SELECT * FROM dogs WHERE id = ?;"
+    #row = DB[:conn].execute(sql,id).first
     dog = self.new(id:id,name:row[1],breed:row[2])
     dog.id = id
     dog
