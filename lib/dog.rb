@@ -56,5 +56,6 @@ class Dog
     self.new_from_db(row)
   end
   
-  
+  self.find_or_create_by_id(id)
+  end
 end
