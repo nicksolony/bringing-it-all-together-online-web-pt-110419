@@ -61,7 +61,7 @@ class Dog
     row = DB[:conn].execute(sql,name,breed)
     binding.pry
     if !row.empty?
-      self.find_by_id(row[0])
+      self.find_by_id(row[0][0])
     else
       self.create(name:name,breed:breed)
     end
