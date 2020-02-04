@@ -57,6 +57,6 @@ class Dog
   end
   
   def self.find_or_create_by_id(id)
-  
+    
   end
 end
